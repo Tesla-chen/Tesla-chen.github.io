@@ -12,7 +12,7 @@
                 minSize: 10,
                 maxSize: 20,
                 newOn: 1000,
-                flakeColor: "#FFFFFF" /* 此处可以定义雪花颜色，若要白色可以改为#AFDAEF */
+                flakeColor: "#AFDAEF" /* 此处可以定义雪花颜色，若要白色可以改为#AFDAEF */
             },
             options = $.extend({}, defaults, options);
         var interval = setInterval(function () {
