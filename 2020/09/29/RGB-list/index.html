@@ -760,13 +760,15 @@ MathJax.Hub.Queue(function() {
 
     <!--单击显示文字-->
 
-    <script type="text/javascript" src="/click_show_text.js"></script>
-
     
     <!--代码雨-->
 
     
     <!--鼠标点击烟花爆炸效果，需要引入jQuery-->
+
+    <canvas class="fireworks" style="position: fixed;left: 0;top: 0;z-index: 1; pointer-events: none;" ></canvas> 
+    <script type="text/javascript" src="//cdn.bootcss.com/animejs/2.2.0/anime.min.js"></script> 
+    <script type="text/javascript" src="/fireworks.js"></script>
 
     
 <!-- 引入jquery 已经引入过了可去掉 -->
@@ -779,6 +781,11 @@ MathJax.Hub.Queue(function() {
     document.write('<script type="text/javascript" src="/snow2.js"><\/script>');
   }
 </script>
+    <!-- 代码块复制功能 -->
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/clipboard@2.0.4/dist/clipboard.js"></script>
+<script type="text/javascript" src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+<script type="text/javascript" src="/js/clipboard_use.js"></script>
+
 <script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"log":false,"model":{"jsonPath":"/live2dw/assets/miku.model.json"},"display":{"position":"right","width":150,"height":300},"mobile":{"show":true}});</script></body>
 
 
