@@ -59,7 +59,7 @@
       
 
 
-<div class="overlay" style="background: #4d4d4d;"></div>
+<div class="overlay" style="background: #4d4d4d;background: url('/img/biubiubiu.gif') no-repeat ;"></div>
 <div class="intrude-less">
 	<header id="header" class="inner">
 		<a href="/" class="profilepic">
@@ -75,11 +75,11 @@
 		<nav class="header-menu">
 			<ul>
 			
-				<li><a href="/" target="_blank">主页</a></li>
+				<li><a href="/" >主页</a></li>
 			
-				<li><a href="https://zhousiwei.gitee.io/ibooks/" target="_blank">技术笔记</a></li>
+				<li><a target="_blank" rel="noopener" href="https://zhousiwei.gitee.io/ibooks/" >技术笔记</a></li>
 			
-				<li><a href="/tags/%E9%9A%8F%E7%AC%94/" target="_blank">随笔</a></li>
+				<li><a href="/tags/%E9%9A%8F%E7%AC%94/" >随笔</a></li>
 			
 			</ul>
 		</nav>
@@ -101,13 +101,13 @@
 		<nav class="header-nav">
 			<div class="social">
 				
-					<a class="github" href="#" title="GitHub" target="_blank"><i class="icon-github"></i></a>
+					<a class="github" href="#" title="GitHub" ><i class="icon-github"></i></a>
 				
-					<a class="gitee" href="#" title="码云" target="_blank"><i class="icon-gitee"></i></a>
+					<a class="gitee" href="#" title="码云" ><i class="icon-gitee"></i></a>
 				
-					<a class="jianshu" href="#" title="简书" target="_blank"><i class="icon-jianshu"></i></a>
+					<a class="jianshu" href="#" title="简书" ><i class="icon-jianshu"></i></a>
 				
-					<a class="cnblog" href="#" title="博客园" target="_blank"><i class="icon-cnblog"></i></a>
+					<a class="cnblog" href="#" title="博客园" ><i class="icon-cnblog"></i></a>
 				
 			</div>
 		
@@ -209,8 +209,8 @@
   
     <h1 itemprop="name">
 	
-	  <a class="article-title" href="/2020/09/29/RGB-list/" target="_blank">RGB色彩表</a>
-  
+	  <a class="article-title" href="/2020/09/29/RGB-list/">RGB色彩表</a>
+	
     </h1>
   
 
@@ -297,8 +297,8 @@
   
     <h1 itemprop="name">
 	
-	  <a class="article-title" href="/2020/09/28/termux/" target="_blank">Termux入门</a>
-  
+	  <a class="article-title" href="/2020/09/28/termux/">Termux入门</a>
+	
     </h1>
   
 
@@ -389,8 +389,8 @@
   
     <h1 itemprop="name">
 	
-	  <a class="article-title" href="/2020/09/27/hello-world/" target="_blank">Hello World</a>
-  
+	  <a class="article-title" href="/2020/09/27/hello-world/">Hello World</a>
+	
     </h1>
   
 
@@ -522,7 +522,7 @@
 		isArchive: false,
 		isTag: false,
 		isCategory: false,
-		open_in_new: true,
+		open_in_new: false,
 		toc_hide_index: true,
 		root: "/",
 		innerArchive: true,
@@ -731,7 +731,7 @@
     	<section class="tools-section tools-section-me" q-show="aboutme">
         
           
-  	  		<div class="aboutme-wrap" id="aboutme">主要涉及技术：<br>Java后端开发、聚合支付、<br>公众号开发、开源爱好者、Linux<br><br>联系QQ:2434387555<br><br>很惭愧<br><br>只做了一点微小的工作<br>谢谢大家</div>
+  	  		<div class="aboutme-wrap" id="aboutme">云想衣裳花想容<br>春风拂槛露华浓</div>
   	  	
     	</section>
     
@@ -819,6 +819,66 @@
   <!-- <script async type="text/javascript" size="90" alpha="0.2" zIndex="0" src="/plugins/ribbon.js/ribbon.min.js"></script> -->
   
   
+    <script type="text/javascript" src="/plugins/live2d-widget.js/L2Dwidget.min.js"></script>
+<script type="text/javascript">
+  /**
+   * 完整配置请参考：https://l2dwidget.js.org/docs/class/src/index.js~L2Dwidget.html#instance-method-init
+   */
+  var pluginModelPath = "assets/", // 模型的文件路径，无需更改
+    pluginRootPath = "/live2d_models/"; // 插件的路径，无需更改
+  //特定的模型json文件名称
+  var modelPathJson = {
+    "epsilon2_1": "Epsilon2.1",
+    "gf": "Gantzert_Felixander",
+    "haru/01": "haru01",
+    "haru/02": "haru02",
+    "nietzsche": "nietzche"
+  }
+
+  
+    var modelName = "hibiki";
+  
+
+  var modelJsonPath = "";
+  if (modelPathJson[modelName]) {
+    modelJsonPath = pluginRootPath + modelName + "/" + pluginModelPath + modelPathJson[modelName] +
+      ".model.json";
+  } else {
+    modelJsonPath = pluginRootPath + modelName + "/" + pluginModelPath + modelName + ".model.json";
+  }
+  L2Dwidget.init({
+    model: {
+      jsonPath: modelJsonPath
+    },
+    display: {
+       position: "right", 
+       width: 145, 
+       height: 315, 
+       hOffset: 50, 
+      
+    },
+    mobile: {
+      
+       scale: 0.6 
+    },
+    react: {
+       opacity: 0.8 
+    }
+  })
+
+</script>
+
+  
+  
+  <script type="text/javascript" src="/lib/snow.js"></script>
+  <script type="text/javascript" src="/lib/jquery-2.1.4.min.js"></script>
+  <script>
+    snow.down();
+    $(window).resize(function() {
+      $("canvas").css("z-index","500").remove();
+      snow.down();
+    });
+  </script>
   
 <script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"log":false,"model":{"jsonPath":"live2d-widget-model-hibiki"},"display":{"position":"right","width":150,"height":300},"mobile":{"show":true}});</script></body>
 
