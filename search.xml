@@ -67,28 +67,39 @@
 <p>音量加+E -&gt; Esc键<br>音量加+T -&gt; Tab键<br>音量加+1 -&gt; F1（和音量增加+ 2→F2等）<br>音量加+0 -&gt; F10<br>音量加+B -&gt; Alt + B，使用readline时返回一个单词<br>音量加+F -&gt; Alt + F，使用readline时转发一个单词<br>音量加+X -&gt; Alt+X<br>音量加+W -&gt; 向上箭头键<br>音量加+A -&gt; 向左箭头键<br>音量加+S -&gt; 向下箭头键<br>音量加+D -&gt; 向右箭头键<br>音量加+L -&gt; | （管道字符）<br>音量加+H -&gt; 〜（波浪号字符）<br>音量加+U -&gt; _ (下划线字符)<br>音量加+P -&gt; 上一页<br>音量加+N -&gt; 下一页<br>音量加+. -&gt; Ctrl + \（SIGQUIT）<br>音量加+V -&gt; 显示音量控制<br>音量加+Q -&gt; 显示额外的按键视图</p>
 <h3 id="基本命令"><a href="#基本命令" class="headerlink" title="基本命令"></a>基本命令</h3><p>Termux除了支持apt命令外,还在此基础上封装了pkg命令,pkg命令向下兼容apt命令.</p>
 <p>pkg search  (包名)         搜索包<br>pkg install (包名)         安装包<br>pkg uninstall (包名)       卸载包<br>pkg reinstall (包名)       重新安装包<br>pkg update                更新源<br>pkg upgrade               升级软件包<br>pkg list-all              列出可供安装的所有包<br>pkg list-installed     列出已经安装的包<br>pkg shoe (包名)      显示某个包的详细信息<br>pkg files (包名)    显示某个包的相关文件夹路径</p>
-<h3 id="目录环境结构"><a href="#目录环境结构" class="headerlink" title="目录环境结构"></a>目录环境结构</h3><p>~  echo $HOME<br>/data/data/com.termux/files/home</p>
-<p>~  echo $PREFIX<br>/data/data/com.termux/files/usr</p>
-<p>~  echo $TMPPREFIX<br>/data/data/com.termux/files/usr/tmp/zsh</p>
+<h3 id="目录环境结构"><a href="#目录环境结构" class="headerlink" title="目录环境结构"></a>目录环境结构</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">~ <span class="built_in">echo</span> <span class="variable">$HOME</span></span><br><span class="line">/data/data/com.termux/files/home</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">~ <span class="built_in">echo</span> <span class="variable">$PREFIX</span></span><br><span class="line">/data/data/com.termux/files/usr</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">~ <span class="built_in">echo</span> <span class="variable">$TMPPREFIX</span></span><br><span class="line">/data/data/com.termux/files/usr/tmp/zsh</span><br></pre></td></tr></table></figure>
 <h3 id="端口查看"><a href="#端口查看" class="headerlink" title="端口查看"></a>端口查看</h3><p>Android 10 以下版本</p>
 <p>Andorid 10 以下的版本是可以正常使用netstat 命令的，可以方便的查看端口开放信息</p>
-<p>输入命令 netstat -an 查看所有端口<br>输入命令 netstat -an|grep 8888 查看8888端口信息(查看单个端口信息)</p>
+<p>输入命令 </p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">netstat -an</span><br></pre></td></tr></table></figure>
+<p>查看所有端口<br>输入命令 </p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">netstat -an|grep 8888</span><br></pre></td></tr></table></figure>
+<p>查看8888端口信息(查看单个端口信息)</p>
 <h2 id="更换国内源"><a href="#更换国内源" class="headerlink" title="更换国内源"></a>更换国内源</h2><p>更换Termux清华源,加快包下载速度</p>
-<h3 id="设置默认编辑器"><a href="#设置默认编辑器" class="headerlink" title="设置默认编辑器"></a>设置默认编辑器</h3><p>输入命令 export EDITOR=vim</p>
-<h3 id="编辑源文件"><a href="#编辑源文件" class="headerlink" title="编辑源文件"></a>编辑源文件</h3><p>输入命令 apt edit-sources</p>
-<p>将原来的<a href="https://termux.net官方源替换为http//mirrors.tuna.tsinghua.edu.cn/termux">https://termux.net官方源替换为http://mirrors.tuna.tsinghua.edu.cn/termux</a></p>
-<p>保存并退出<br>输入命令 pkg update 更新包</p>
-<h3 id="直接编辑源文件"><a href="#直接编辑源文件" class="headerlink" title="直接编辑源文件"></a>直接编辑源文件</h3><p>输入命令 vim $PREFIX/etc/apt/sources.list </p>
+<h3 id="设置默认编辑器"><a href="#设置默认编辑器" class="headerlink" title="设置默认编辑器"></a>设置默认编辑器</h3><p>输入命令 </p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">export</span> EDITOR=vim</span><br></pre></td></tr></table></figure>
+<h3 id="编辑源文件"><a href="#编辑源文件" class="headerlink" title="编辑源文件"></a>编辑源文件</h3><p>输入命令 </p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">apt edit-sources</span><br></pre></td></tr></table></figure>
+<p>将原来的 <a href="https://termux.net/">https://termux.net</a><br>官方源替换为<a href="http://mirrors.tuna.tsinghua.edu.cn/termux">http://mirrors.tuna.tsinghua.edu.cn/termux</a></p>
+<p>保存并退出<br>输入命令 </p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">pkg update </span><br></pre></td></tr></table></figure>
+<p>更新包</p>
+<h3 id="直接编辑源文件"><a href="#直接编辑源文件" class="headerlink" title="直接编辑源文件"></a>直接编辑源文件</h3><p>输入命令 </p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">vim <span class="variable">$PREFIX</span>/etc/apt/sources.list </span><br></pre></td></tr></table></figure>
 <p>键入 i 进入编辑状态</p>
-<p>将原来的<a href="https://termux.net官方源替换为http//mirrors.tuna.tsinghua.edu.cn/termux">https://termux.net官方源替换为http://mirrors.tuna.tsinghua.edu.cn/termux</a></p>
-<p>点击 ESC 退出编辑状态，输入 :wq 保存退出<br>输入 pkg update 更新包</p>
-<h2 id="安装基本工具"><a href="#安装基本工具" class="headerlink" title="安装基本工具"></a>安装基本工具</h2><p>pkg update<br>pkg install vim curl wget git tree -y<br>pkg install vim curl wget git unzip unrar</p>
+<p>将原来的 <a href="https://termux.net/">https://termux.net</a><br>官方源替换为<a href="http://mirrors.tuna.tsinghua.edu.cn/termux">http://mirrors.tuna.tsinghua.edu.cn/termux</a></p>
+<p>点击 ESC 退出编辑状态，输入 :wq 保存退出<br>输入 </p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">pkg update </span><br></pre></td></tr></table></figure>
+<p>更新包</p>
+<h2 id="安装基本工具"><a href="#安装基本工具" class="headerlink" title="安装基本工具"></a>安装基本工具</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">pkg update</span><br><span class="line">pkg install vim curl wget git tree -y</span><br><span class="line">pkg install vim curl wget git unzip unrar</span><br></pre></td></tr></table></figure>
 <h2 id="Termux优化"><a href="#Termux优化" class="headerlink" title="Termux优化"></a>Termux优化</h2><h3 id="终端配色"><a href="#终端配色" class="headerlink" title="终端配色"></a>终端配色</h3><p>执行下面这个命令确保已经安装好了curl</p>
-<p>sh -c “$(curl -fsSL <a href="https://github.com/Cabbagec/termux-ohmyzsh/raw/master/install.sh)&quot;">https://github.com/Cabbagec/termux-ohmyzsh/raw/master/install.sh)&quot;</a>  </p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sh -c <span class="string">&quot;<span class="subst">$(curl -fsSL https://github.com/Cabbagec/termux-ohmyzsh/raw/master/install.sh)</span>&quot;</span>  </span><br></pre></td></tr></table></figure>
 <p>Android6.0以上会弹框确认是否授权,允许授权后Termux可以方便的访问SD卡文件.<br>脚本允许后先后有如下两个选项:</p>
 <p>Enter a number, leave blank to not to change: 14<br>Enter a number, leave blank to not to change: 6</p>
 <p>分别选择背景色和字体<br>想要继续更改挑选配色的话,继续运行脚本来再次筛选:</p>
-<p>$ ~/termux-ohmyzsh/install.sh</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ ~/termux-ohmyzsh/install.sh</span><br></pre></td></tr></table></figure>
 <p>exit重启sessions会话生效配置</p>
 ]]></content>
       <tags>
