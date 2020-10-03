@@ -13,7 +13,7 @@
 <link rel="stylesheet" href="/css/main.css">
 
 
-<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
 
 <script id="hexo-configurations">
     var NexT = window.NexT || {};
@@ -22,12 +22,12 @@
 
 
   <meta property="og:type" content="website">
-<meta property="og:title" content="tags">
+<meta property="og:title" content="标签">
 <meta property="og:url" content="http://example.com/tags/index.html">
 <meta property="og:site_name" content="Halo">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2020-10-02T09:23:38.000Z">
-<meta property="article:modified_time" content="2020-10-02T09:23:38.305Z">
+<meta property="article:modified_time" content="2020-10-03T06:17:06.485Z">
 <meta property="article:author" content="Halo">
 <meta name="twitter:card" content="summary">
 
@@ -44,7 +44,7 @@
   };
 </script>
 
-  <title>tags | Halo
+  <title>标签 | Halo
 </title>
   
 
@@ -189,7 +189,7 @@
     <div class="post-block" lang="zh-CN">
       <header class="post-header">
 
-<h1 class="post-title" itemprop="name headline">tags
+<h1 class="post-title" itemprop="name headline">标签
 </h1>
 
 <div class="post-meta">
@@ -203,7 +203,15 @@
       
       
       <div class="post-body">
-          
+          <div class="tag-cloud">
+            <div class="tag-cloud-title">
+              目前共计 6 个标签
+            </div>
+            <div class="tag-cloud-tags">
+              <a href="/tags/Hexo/" style="font-size: 12px; color: #ccc">Hexo</a> <a href="/tags/Html/" style="font-size: 12px; color: #ccc">Html</a> <a href="/tags/RGB/" style="font-size: 12px; color: #ccc">RGB</a> <a href="/tags/css/" style="font-size: 12px; color: #ccc">css</a> <a href="/tags/%E6%89%8B%E6%9C%BA%E7%BC%96%E7%A8%8B/" style="font-size: 12px; color: #ccc">手机编程</a> <a href="/tags/%E9%AB%98%E7%BA%A7%E7%BB%88%E7%AB%AF/" style="font-size: 12px; color: #ccc">高级终端</a>
+            </div>
+          </div>
+        
       </div>
       
       
@@ -218,7 +226,6 @@
 
           </div>
           
-    <div class="comments" id="gitalk-container"></div>
 
 <script>
   window.addEventListener('tabs:register', () => {
@@ -283,8 +290,10 @@
         </a>
       </div>
       <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
         <span class="site-state-item-count">6</span>
-        <span class="site-state-item-name">标签</span>
+        <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
 </div>
@@ -376,9 +385,10 @@
   </div>
 
   
-  <script src="/lib/anime.min.js"></script>
-  <script src="/lib/velocity/velocity.min.js"></script>
-  <script src="/lib/velocity/velocity.ui.min.js"></script>
+  <script size="300" alpha="0.6" zIndex="-1" src="//cdn.jsdelivr.net/gh/theme-next/theme-next-canvas-ribbon@1/canvas-ribbon.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/animejs@3.1.0/lib/anime.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/velocity/1.2.1/velocity.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/velocity/1.2.1/velocity.ui.min.js"></script>
 
 <script src="/js/utils.js"></script>
 
@@ -413,25 +423,6 @@
 
   
 
-<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.css">
-
-<script>
-NexT.utils.loadComments(document.querySelector('#gitalk-container'), () => {
-  NexT.utils.getScript('//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js', () => {
-    var gitalk = new Gitalk({
-      clientID    : '1197a360c3d9436cfe97',
-      clientSecret: '1416af2d3c17fd9e3d9912fa15d2e4a800bc22ac',
-      repo        : 'Tesla-chen.github.io',
-      owner       : 'Tesla-chen',
-      admin       : ['Tesla-chen'],
-      id          : 'f47af1d1eda4d807b02bba32be15120b',
-        language: 'zh-CN',
-      distractionFreeMode: true
-    });
-    gitalk.render('gitalk-container');
-  }, window.Gitalk);
-});
-</script>
 
 </body>
 </html>
