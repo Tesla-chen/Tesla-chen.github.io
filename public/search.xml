@@ -136,7 +136,7 @@
 <h2 id="导入模块"><a href="#导入模块" class="headerlink" title="导入模块"></a>导入模块</h2><p>imp：访问import模块的内部<br>zipimport：从ZIP归档中导入模块pkgutil：包扩展工具<br>modulefinder：通过脚本查找模块runpy：定位并执行Python模块importlib：import的一种实施<br>Python语言<br>parser：访问Python解析树<br>ast：抽象句法树<br>symtable：访问编译器符号表<br>symbol：Python解析树中的常量token：Python解析树中的常量keyword：Python关键字测试tokenize：Python源文件分词tabnany：模糊缩进检测<br>pyclbr：Python类浏览支持py_compile：编译Python源文件compileall：按字节编译Python库<br>dis：Python字节码的反汇编器pickletools：序列化开发工具</p>
 <h2 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h2><p>formatter：通用格式化输出<br>Windows相关<br>msilib：读写Windows的Installer文件msvcrt：MS VC + + Runtime的有用程序<br>winreg：Windows注册表访问winsound：Windows声音播放接口</p>
 <h2 id="Unix相关"><a href="#Unix相关" class="headerlink" title="Unix相关"></a>Unix相关</h2><p>posix：最常用的POSIX调用<br>pwd：密码数据库<br>spwd：影子密码数据库<br>grp：组数据库<br>crypt：Unix密码验证<br>termios：POSIX风格的tty控制<br>tty：终端控制函数<br>pty：伪终端工具<br>fcntl：系统调用fcntl()和ioctl()<br>pipes：shell管道接口<br>resource：资源可用信息<br>nis：Sun的NIS的接口<br>syslog：Unix 日志服务</p>
-<p>以上就是对 Python 内置各个模块的简要总结，大家可收藏此文，后面做项目时再从中检索。希望此文能帮助到大家，欢迎补充常用的 Python 内置模块。</p>
+<p>以上就是对 Python 内置各个模块的简要总结，大家可收藏此文，后面做项目时再从中检索。希望此文能帮助到大家，欢迎补充常用的 Python 内置模块。<a href="https://docs.python.org/">Python官方文档</a></p>
 ]]></content>
       <categories>
         <category>Python</category>
