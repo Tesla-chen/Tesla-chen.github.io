@@ -1228,7 +1228,7 @@ pre .javascript .function {
 }
 .links-of-author a::before,
 .links-of-author span.exturl::before {
-  background: #30667a;
+  background: #ff8ad4;
   border-radius: 50%;
   content: ' ';
   display: inline-block;
@@ -2755,26 +2755,12 @@ ul.breadcrumb li + li:last-child {
   -moz-box-shadow: 0 0 5px rgba(202,203,204,0.5);
 }
 body {
-  background: #f0ffff;
+  background: url("https://source.unsplash.com/random/1600x900");
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
   background-position: 50% 50%;
 }
-.header {
-  background: url("https://i.loli.net/2020/09/29/JnAuHSvqPYi1kUT.jpg") none repeat scroll !important;
-}
-/*.footer {
-          background:rgba(颜色rgb,透明度) none repeat scroll !important;
-}
-//侧栏图片及内部文字颜色修改
-#sidebar {
-            background:url(图片链接);
-            background-size: cover;
-            background-position:center;
-            background-repeat:no-repeat;
-            p,span,a {color: 颜色代码;}
-}*/
 .content-wrap {
   opacity: 0.9;
 }
